@@ -6,7 +6,7 @@ namespace BlazorMCIC.Client.Services.CategoryService
 {
     public interface ICategoryService
     {
-        public List<Category> Categories { get; set; }
+        List<Category> Categories { get; set; }
         Task LoadCategories();
     }
 }
