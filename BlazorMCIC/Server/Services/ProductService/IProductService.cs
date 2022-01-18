@@ -8,6 +8,6 @@ namespace BlazorMCIC.Server.Services.ProductService
     {
         Task<List<Product>> GetAllProduct();
         Task<List<Product>> GetProductsByCategory(string categoryUrl);
-        Task<Product> GetProductById(int Id);
+        Task<Product> GetProduct(int id);
     }
 }

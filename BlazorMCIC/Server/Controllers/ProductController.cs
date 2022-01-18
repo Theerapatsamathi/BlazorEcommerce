@@ -35,11 +35,10 @@ namespace BlazorMCIC.Server.Controllers
             //อิงตาม interface
             return Ok(await _productService.GetProductsByCategory(categoryUrl));
         }
-
         [HttpGet("{id}")]
         public async Task<ActionResult<Product>> GetProduct(int id)
         {
-            return Ok(await _productService.GetProductById(id));
+            return Ok(await _productService.GetProduct(id));
         }
     }
 }
