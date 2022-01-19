@@ -1,3 +1,5 @@
+using Blazored.LocalStorage;
+using Blazored.Toast;
 using BlazorMCIC.Client.Services.CategoryService;
 using BlazorMCIC.Client.Services.ProductService;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
@@ -22,6 +24,8 @@ namespace BlazorMCIC.Client
             builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
             builder.Services.AddScoped<IProductService, ProductService>();
             builder.Services.AddScoped<ICategoryService, CategoryService>();
+            builder.Services.AddBlazoredLocalStorage();
+            builder.Services.AddBlazoredToast();
             await builder.Build().RunAsync();
         }
     }
